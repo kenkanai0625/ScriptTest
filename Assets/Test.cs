@@ -25,18 +25,28 @@ public class Test : MonoBehaviour {
 
         public void Magic()
         {
-            this.mp -= 5;    
+            
+             
 
             if (mp > 0)
             {
-                Debug.Log("魔法攻撃をした。残りMPは" + mp);
+                this.mp -= 5;
+                if (mp > 0)
+                {
+                    Debug.Log("魔法攻撃をした。残りMPは" + mp);
+                }
+                
+                else
+                {
+                    Debug.Log("MPが足りないため魔法が使えない。");
+                }
             }
             else
             {
                 Debug.Log("MPが足りないため魔法が使えない。");
             }
-            
-        
+
+
         }
     }
 
